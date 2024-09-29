@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traveler</title>
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Title of the project" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/PaulleDemon" />
+    <!--Replace with the current website url-->
+    <meta property="og:image" content="" />
+
+    <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css" /> -->
+    <link rel="stylesheet" href="./css/tailwind-build.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/botaoZap.css" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white tw-text-black">
+    <header
+        class="tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] lg:tw-justify-around">
+        <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px]" href="">
+            <img src="./assets/logo/logo.png" alt="logo" class="tw-object tw-h-full tw-w-full" />
+        </a>
+        <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+            <div
+                class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+                <a class="header-links" href="#entreContato"> Sobre nós </a>
+                <a class="header-links" href="#entreContato"> Contatos </a>
+                <a class="header-links" href="#produtoss"> Produtos </a>
+                <a class="header-links"  href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
+                target="_blank">Faça seu orçamento </a>
+            </div>
+        </div>
+        <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
+            onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+    </header>
+    <a
+        href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
+        class="whatsapp-button"
+        target="_blank"
+        aria-label="Entre em contato pelo WhatsApp"
+    >
+        <img alt="Logo whatszap" width="50px" src="./assets/logo/whatsapp.png"/>
+    </a>
+
+    <section
+        class="hero-section tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-md:tw-mt-[50px]"
+        id="hero-section">
+
+        <div class="tw-w-full tw-h-full tw-p-[5%]
+                        tw-place-content-center tw-min-h-[100vh]
+                        tw-gap-6 max-xl:tw-place-items-center
+                        tw-flex max-xl:tw-flex-col">
+            <div
+                class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-max-w-[50%] tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4">
+                <div class="tw-flex tw-flex-col tw-place-content-center tw-items-center">
+                    <div
+                        class="reveal-up tw-text-center tw-text-6xl tw-font-semibold tw-uppercase tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug">
+                        <span class=""> Descubra as soluções </span>
+                        <br />
+                        <span class=""> para calhas e rufos </span>
+                    </div>
+
+                </div>
+
+                <div class="tw-flex tw-flex-col tw-w-full tw-place-items-center tw-place-content-center">
+                    <div
+                        class="reveal-up tw-mt-3 tw-max-w-[450px] tw-p-2 tw-text-center tw-text-gray-700 max-lg:tw-max-w-full">
+                        Somos uma empresa dedicada a fornecer soluções inovadoras.
+                    </div>
+
+                    <div class="reveal-up tw-mt-10 tw-flex tw-place-items-center tw-gap-4">
+                        <a 
+                            id="entreContato"
+                            class="btn tw-bg-[#7e22ce85] tw-shadow-lg tw-shadow-primary tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                            href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
+                            target="_blank">
+                            Entre em contato
+                        </a>
+
+                        <a class="btn tw-flex tw-gap-2 !tw-border-solid !tw-border-[1px] !tw-border-black !tw-text-black !tw-bg-transparent tw-transition-colors tw-duration-[0.3s] hover:!tw-bg-white hover:!tw-text-black"
+                            href="#artigos">
+                            <i class="bi bi-play-circle-fill"></i>
+                            <span  >Saiba mais</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="reveal-up tw-max-w-[750px]  tw-max-h-[100vh] tw-w-full tw-flex tw-place-content-center tw-overflow-hidden">
+                <div class="tw-relative tw-max-w-[450px] slide-in tw-flex tw-place-content-center">
+                    <div class="tw-overflow-hidden">
+                        <img src="./assets/images/home/image1.jpg" alt="phone" class="tw-h-full" srcset="">
+                    </div>
+                    <div class="tw-absolute tw-bottom-10 tw-max-h-[350px] tw-overflow-hidden"
+                        style="transform: translateY(-180px);">
+                        <div class="swiper slideshow-container 
+                                            tw-p-5 tw-max-h-[350px] tw-relative
+                                            tw-max-w-[350px]
+                                            max-lg:tw-max-w-[300px]
+                                            max-lg:tw-max-h-[260px]
+                                            max-lg:!tw-mt-10 ">
+
+                            <div class="swiper-wrapper tw-w-full tw-max-h-[650px]  tw-relative" id="slideshow">
+
+
+                            </div>
+                            <p class="prev">&#10094;</a>
+                            <p class="next">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section
+        class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-8">
+        <h2 class="reveal-up tw-text-3xl max-md:tw-text-xl">
+            Com a confiança de marcas que você conhece
+        </h2>
+
+        <div class="reveal-up carousel-container">
+            <div class="carousel lg:w-place-content-center tw-mt-6 tw-flex tw-w-full tw-gap-5 max-md:tw-gap-2">
+                <!-- add the brands using your app  -->
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img src="./assets/images/brand-logos/bosch.png" alt="Google"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset="" />
+                </div>
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img src="./assets/images/brand-logos/microsoft.svg" alt="Microsoft"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset="" />
+                </div>
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img src="./assets/images/brand-logos/tigre.png" alt="Adobe"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset="" />
+                </div>
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img src="./assets/images/brand-logos/icons8-anúncios-do-google-48.png" alt="Adobe"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset="" />
+                </div>
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img src="./assets/images/brand-logos/icons8-insta-48.png" alt="Adobe"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset="" />
+                </div>
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img src="./assets/images/brand-logos/icons8-google-business-50.png" alt="Adobe"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section
+            class="tw-relative tw-flex tw-w-full tw-min-h-[60vh] tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-8"
+        >
+            
+            <div class="reveal-up tw-flex tw-border-[1px] max-lg:tw-w-full tw-border-black tw-rounded-md tw-p-2 tw-max-w-[850px] tw-w-[1000px] tw-min-h-[550px] max-lg:tw-min-w-[320px] max-lg:tw-min-h-[250px] max-lg:tw-h-auto">
+
+                <div class="tw-relative tw-bg-black tw-min-w-full tw-min-h-full tw-overflow-clip tw-rounded-md">
+                    <iframe class="tw-absolute tw-top-[50%] tw--translate-y-[50%] tw-left-[50%] tw--translate-x-[50%] tw-w-full tw-h-full" src="https://www.youtube.com/embed/WrfN3iJzrWs?si=BEQ4iPK9NXSM_fkk&amp;controls=0&rel=0&showinfo=0&autoplay=1&loop=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </section> -->
+
+    <section
+        class="tw-relative tw-mt-10 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-items-center lg:tw-p-6">
+
+        <h2 class="tw-text-4xl max-md:tw-text-3xl">Experimente os principais benefícios</h2>
+
+        <div
+            class="reveal-up tw-mt-[5%] tw-flex tw-h-full tw-w-full tw-place-content-center tw-gap-8 tw-p-4 max-lg:tw-max-w-full max-lg:tw-flex-col">
+            <div
+                class="tw-flex tw-flex-col tw-gap-[200px] tw-h-full tw-max-w-[50%] max-lg:tw-max-w-full tw-px-[10%] max-lg:tw-px-4 max-lg:tw-gap-16 max-lg:tw-w-full lg:tw-top-[20%]">
+                <div class="tw-flex tw-gap-6">
+                    <div
+                        class="tw-w-[80px] tw-h-[80px] tw-min-w-[80px] 
+                                    tw-min-h-[80px] tw-text-5xl
+                                    max-lg:tw-min-h-[60px] max-lg:tw-min-w-[60px] max-lg:tw-h-[60px] max-lg:tw-w-[60px]">
+                        <!-- <img src="./assets/images/icons/unlock.png" alt="unlock" class="tw-object-contain tw-w-full tw-h-full"> -->
+                        <i class="bi bi-lock-fill"></i>
+                    </div>
+                    <h3 class="tw-text-4xl max-lg:tw-text-2xl max-lg:tw-font-normal">
+                        Proteja sua casa contra infiltrações com calhas e rufos seguros e duradouros
+                    </h3>
+                </div>
+                <div class="tw-flex tw-gap-6">
+                    <div
+                        class="tw-w-[80px] tw-text-5xl tw-h-[80px] tw-min-w-[80px] tw-min-h-[80px] max-lg:tw-min-h-[60px] max-lg:tw-min-w-[60px] max-lg:tw-h-[60px] max-lg:tw-w-[60px]">
+                        <!-- <img src="./assets/images/icons/unlock.png" alt="unlock" class="tw-object-contain tw-w-full tw-h-full"> -->
+                        <i class="bi bi-lock-fill"></i>
+                    </div>
+                    <h3 class="tw-text-4xl max-lg:tw-text-2xl max-lg:tw-font-normal">
+                        Segurança garantida: proteja seu telhado com calhas que evitam danos estruturais
+                    </h3>
+                </div>
+
+                <div class="tw-flex tw-gap-6">
+                    <div
+                        class="tw-w-[80px] tw-text-5xl tw-h-[80px] tw-min-w-[80px] tw-min-h-[80px] max-lg:tw-min-h-[60px] max-lg:tw-min-w-[60px] max-lg:tw-h-[60px] max-lg:tw-w-[60px]">
+                        <!-- <img src="./assets/images/icons/lighting.png" alt="unlock" class="tw-object-contain tw-w-full tw-h-full"> -->
+                        <i class="bi bi-lightning-fill"></i>
+                    </div>
+                    <h3 class="tw-text-4xl max-lg:tw-text-2xl max-lg:tw-font-normal">
+                        Instalação rápida e eficiente: calhas de alta performance para proteger seu imóvel sem demora
+                    </h3>
+                </div>
+
+            </div>
+
+            <div
+                class="tw-relative tw-flex tw-max-w-[30%] max-lg:tw-max-w-full tw-flex-col tw-place-items-start tw-gap-4  tw-p-2 max-lg:tw-place-items-center max-lg:tw-place-content-center max-lg:tw-w-full">
+                <div
+                    class="tw-top-20 lg:tw-sticky tw-max-h-[800px] tw-h-full tw-max-w-[850px] max-lg:tw-max-h-fit max-lg:tw-max-w-[320px] tw-overflow-hidden tw-rounded-lg">
+                    <img src="./assets/images/home/calhas4.jpg" alt="phone"
+                        class="tw-h-full tw-w-full tw-object-contain" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtoss"
+        class="tw-relative tw-mt-10 tw-flex tw-min-h-[20vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-items-center lg:tw-p-6">
+
+        <div  class="tw-w-full tw-flex tw-mt-8 tw-h-fit
+                        tw-max-w-[100vw] tw-overflow-hidden tw-relative">
+            <div class="edge-gradient tw-z-10 tw-absolute tw-w-full tw-h-full tw-left-0">
+            </div>
+            <div class="countries-container scroller tw-flex tw-w-full tw-gap-3" data-direction="right">
+            </div>
+
+        </div>
+        <div class="tw-w-full tw-flex tw-relative tw-h-fit tw-mt-8
+                    tw-max-w-[100vw] 
+                    tw-overflow-hidden">
+            <div class="edge-gradient tw-z-10 tw-absolute tw-w-full tw-h-full tw-left-0">
+            </div>
+            <div class="places-container scroller tw-flex tw-w-full tw-gap-3" data-direction="left" data-speed="slow">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="artigos"
+        class="tw-mt-5 tw-flex tw-min-h-[80vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[2%] max-lg:tw-p-3">
+        <h3 class="reveal-up tw-text-center tw-text-4xl tw-font-medium max-md:tw-text-2xl">
+            Leia nossos artigos ✨
+        </h3>
+        <!-- articles -->
+        <div class="reveal-up tw-mt-10 tw-flex tw-flex-wrap tw-place-content-center tw-gap-10 max-lg:tw-flex-col">
+            <a href=""
+                class="tw-flex tw-border-[1px] tw-border-black tw-h-[400px] tw-w-[400px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]">
+                <div class="tw-h-[250px] tw-w-full tw-overflow-hidden tw-rounded-md">
+                    <img src="./assets/images/home/calhas5.jpg" alt="article image"
+                        class="tw-h-full tw-w-full tw-object-cover tw-transition-transform tw-duration-[0.3s] hover:tw-scale-[1.04]"
+                        srcset="" />
+                </div>
+                <h3 class="tw-mt-2 tw-text-2xl tw-font-semibold max-md:tw-text-xl">
+                    Importância da Instalação de Calhas para a Proteção da Estrutura da Sua Casa
+                </h3>
+                <p class="tw-text-gray-800">
+                    Entenda como a instalação adequada de calhas pode proteger sua casa contra infiltrações e danos
+                    estruturais, garantindo a durabilidade e segurança do seu imóvel.
+                </p>
+
+            </a>
+            <a href=""
+                class="tw-border-[1px] tw-border-black tw-flex tw-h-[400px] tw-w-[400px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]">
+                <div class="tw-h-[250px] tw-w-full tw-overflow-hidden tw-rounded-md">
+                    <img src="./assets/images/home/p.jpg" alt="article image"
+                        class="tw-h-full tw-w-full tw-object-cover tw-transition-transform tw-duration-[0.3s] hover:tw-scale-[1.04]"
+                        srcset="" />
+                </div>
+                <h3 class="tw-mt-2 tw-text-2xl tw-font-semibold max-md:tw-text-xl">
+                    Como Escolher o Material Ideal para Rufos em Telhados
+                </h3>
+                <p class="tw-text-gray-800">
+                    Descubra os diferentes materiais disponíveis para rufos e saiba qual deles oferece a melhor
+                    resistência e eficiência para proteger seu telhado contra vazamentos.
+                </p>
+            </a>
+            <a href=""
+                class="tw-border-[1px] tw-border-black tw-flex tw-h-[400px] tw-w-[400px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]">
+                <div class="tw-h-[250px] tw-w-full tw-overflow-hidden tw-rounded-md">
+                    <img src="./assets/images/home/Quem.jpg" alt="article image"
+                        class="tw-h-full tw-w-full tw-object-cover tw-transition-transform tw-duration-[0.3s] hover:tw-scale-[1.04]"
+                        srcset="" />
+                </div>
+                <h3 class="tw-mt-2 tw-text-2xl tw-font-semibold max-md:tw-text-xl">
+                    Soluções Sustentáveis: A Captura de Água da Chuva com Calhas
+                </h3>
+                <p class="tw-text-gray-800">
+                    Aprenda como a instalação de calhas para captação de água da chuva pode não apenas ajudar no
+                    gerenciamento das águas pluviais, mas também contribuir para a economia e sustentabilidade do seu
+                    lar.
+                </p>
+            </a>
+        </div>
+    </section>
+
+    <section
+        class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]">
+        <h3 class="tw-text-4xl tw-font-medium tw-text-gray-800 max-md:tw-text-2xl">
+            FAQ
+        </h3>
+        <div class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4">
+            <div class="faq tw-w-full">
+                <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                    <span>Com que frequência devo limpar as calhas?</span>
+                    <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                </div>
+                <div class="content">
+                    É recomendável limpar as calhas pelo menos duas vezes ao ano, especialmente antes da estação
+                    chuvosa, para evitar obstruções e garantir seu funcionamento adequado.
+                </div>
+            </div>
+
+            <div class="faq tw-w-full">
+                <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                    <span>Qual a importância das calhas na proteção da minha casa?</span>
+                    <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                </div>
+                <div class="content">
+                    As calhas são essenciais para direcionar a água da chuva longe das fundações e paredes da sua casa,
+                    prevenindo infiltrações, erosões e danos estruturais.
+                </div>
+            </div>
+
+            <div class="faq tw-w-full">
+                <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                    <span>Qual o valor médio para a instalação de calhas?</span>
+                    <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                </div>
+                <div class="content">
+                    O valor médio para a instalação de calhas varia de acordo com o tipo de material e a extensão do
+                    projeto. Em geral, os preços podem variar de R$ 30 a R$ 100 por metro linear. Para um orçamento mais
+                    preciso, recomendamos uma avaliação no local.
+                </div>
+            </div>
+
+            <div class="faq tw-w-full">
+                <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                    <span>Como posso solicitar um orçamento para a instalação ou manutenção de calhas?</span>
+                    <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                </div>
+                <div class="content">
+                    Você pode solicitar um orçamento entrando em contato conosco diretamente pelo WhatsApp. Faremos uma
+                    avaliação personalizada para fornecer o melhor preço.
+                </div>
+            </div>
+        </div>
+
+        <div class="tw-mt-20 tw-flex tw-flex-col tw-place-items-center tw-gap-4">
+            <div class="tw-text-3xl max-md:tw-text-2xl">
+                Ainda tem perguntas?
+            </div>
+            <a href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
+                class="btn !tw-rounded-full !tw-bg-black" target="_blank">
+                Contato
+            </a>
+
+        </div>
+    </section>
+
+
+
+    <footer
+        class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] tw-text-white max-md:tw-flex-col">
+        <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full">
+            <img src="./assets/logo/logo.png" alt="logo" srcset="" class="tw-max-w-[120px]" />
+            <div>
+                Rua Exemplo, 123,
+                <br />
+                Bairro Exemplo,
+                <br />
+                Cidade Exemplo, Brasil
+            </div>
+            <div class="tw-mt-3 tw-text-lg tw-font-semibold">Siga-nos</div>
+            <div class="tw-flex tw-gap-4 tw-text-2xl">
+                <a href="" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://twitter.com/@pauls_freeman" aria-label="Twitter">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="https://instagram.com/seu_instagram" class="tw-h-[40px] tw-w-[40px]" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+            <h2 class="tw-text-3xl max-md:tw-text-xl">Empresa</h2>
+            <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                <a href="" class="footer-link">Casos de uso</a>
+                <a href="" class="footer-link">Integrações</a>
+                <a href="" class="footer-link">Alterações</a>
+                <a href="" class="footer-link">Blog</a>
+                <a href="" class="footer-link">victorcamargo9901@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+            <h2 class="tw-text-3xl max-md:tw-text-xl">Recursos</h2>
+            <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                <a href="" class="footer-link">Sobre nós</a>
+                <a href="" class="footer-link">FAQ</a>
+                <a
+    href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
+    class="footer-link"
+    target="_blank"
+>
+    Entre em contato
+</a>
+                <a href="" class="footer-link">Blog</a>
+                <a href="" class="footer-link">Política de privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+    integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+    integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+    integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<script src="./index.js"></script>
+
+</html>
