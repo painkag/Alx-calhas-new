@@ -35,6 +35,25 @@
         gtag('js', new Date());
         gtag('config', 'AW-16506400196');
     </script>
+    <!-- Event snippet for Visualização de página conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16506400196/8cdpCIHjv84ZEMTb7r49',
+          'value': 1.0,
+          'currency': 'BRL',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    
 </head>
 
 <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white tw-text-black">
@@ -50,8 +69,12 @@
                 <a class="header-links" href="#entreContato"> Contatos </a>
                 <a class="header-links" href="#produtoss"> Produtos </a>
                 <a class="header-links"
-                    href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
-                    target="_blank">Faça seu orçamento </a>
+   href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
+   target="_blank"
+   onclick="return gtag_report_conversion('https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações.');">
+   Faça seu orçamento
+</a>
+
             </div>
         </div>
         <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
@@ -90,11 +113,13 @@
 
                     <div class="reveal-up tw-mt-10 tw-flex tw-place-items-center tw-gap-4">
                         <a id="entreContato"
-                            class="btn tw-bg-[#7e22ce85] tw-shadow-lg tw-shadow-primary tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
-                            href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
-                            target="_blank">
-                            Entre em contato
-                        </a>
+   class="btn tw-bg-[#7e22ce85] tw-shadow-lg tw-shadow-primary tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+   href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
+   target="_blank"
+   onclick="return gtag_report_conversion('https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações.');">
+   Entre em contato
+</a>
+
 
                         <a class="btn tw-flex tw-gap-2 !tw-border-solid !tw-border-[1px] !tw-border-black !tw-text-black !tw-bg-transparent tw-transition-colors tw-duration-[0.3s] hover:!tw-bg-white hover:!tw-text-black"
                             href="#artigos">
@@ -382,9 +407,12 @@
                 Ainda tem perguntas?
             </div>
             <a href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
-                class="btn !tw-rounded-full !tw-bg-black" target="_blank">
-                Contato
-            </a>
+   class="btn !tw-rounded-full !tw-bg-black"
+   target="_blank"
+   onclick="return gtag_report_conversion('https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações.');">
+   Contato
+</a>
+
 
         </div>
     </section>
@@ -433,9 +461,12 @@
                 <a href="" class="footer-link">Sobre nós</a>
                 <a href="" class="footer-link">FAQ</a>
                 <a href="https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações."
-                    class="footer-link" target="_blank">
-                    Entre em contato
-                </a>
+   class="footer-link"
+   target="_blank"
+   onclick="return gtag_report_conversion('https://wa.me/5511987782295?text=Olá,%20gostaria%20de%20mais%20informações.');">
+   Entre em contato
+</a>
+
                 <a href="" class="footer-link">Blog</a>
                 <a href="" class="footer-link">Política de privacidade</a>
             </div>
